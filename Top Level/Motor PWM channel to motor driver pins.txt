@@ -1,0 +1,22 @@
+Dribbler PWM channel 8
+
+Motor 1 A to 0
+Motor 1 B to 4
+
+Motor 2 A to 1
+Motor 2 B to 5
+
+Motor 3 A to 2
+Motor 3 B to 6
+
+Motor 4 A to 3
+Motor 4 B to 7
+
+CS1 to GPIO 36
+CS2 to GPIO 39
+CS3 to GPIO 34
+CS4 to GPIO 27
+CS5 to GPIO 35
+
+
+
