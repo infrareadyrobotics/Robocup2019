@@ -59,7 +59,7 @@ void computeIMUHeading () {
   }
 
   //Apply Simple complementry Filter
-  heading[0] = -gyroHeadingDeg[2];//((1 - complementaryFactor) * gyroHeadingDeg[2] + (complementaryFactor) * (compassHeading[0])); //XY plane Z axis
+  heading[0] = -((1 - complementaryFactor) * gyroHeadingDeg[2] + (complementaryFactor) * (compassHeading[0])); //XY plane Z axis //gyroHeadingDeg[2];
   heading[1] = gyroHeadingDeg[1]; //(1 - complementaryFactor) * gyroHeadingDeg[1] + (complementaryFactor) * (compassHeading[1]); //XZ plane Y axis //Compass is funky on Y and X axis due to uncomplete calibration
   heading[2] = gyroHeadingDeg[0]; //(1 - complementaryFactor) * gyroHeadingDeg[0] + (complementaryFactor) * (compassHeading[2]); //YZ plane X axis //Compass is funky on Y and X axis due to uncomplete calibration
 }

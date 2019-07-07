@@ -1,0 +1,8 @@
+Eagle/*.b#*
+Eagle/*.s#*
+Eagle/*/*.d#*
+Eagle/*.scr
+Eagle/*.job
+Eagle/*.old
+.vscode/
+Eagle/*.pro

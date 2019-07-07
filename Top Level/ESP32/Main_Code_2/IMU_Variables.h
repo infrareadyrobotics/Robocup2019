@@ -16,8 +16,8 @@ float compassHeadingSign[3] = {0, 0, 0};
 float compassHeadingRaw[3] = {0, 0, 0}; //Raw heading
 
 //Calibartion Values
-float const compassHardCal[3] = {99.5, 60.35, 181.5}; //X, Y, Z
-float const compassSoftCal[3] = {1.149425287, 1.044932079, 1}; //X, Y, Z
+float const compassHardCal[3] = {-78.55, 73.65, 181.5}; //X, Y, Z
+float const compassSoftCal[3] = {1.002734731, 1.008249313, 1}; //X, Y, Z
 
 
 //Accelerometer

@@ -5,11 +5,11 @@ import math
 import struct
 from pyb import UART
 
-ballThresholds = [(10, 80, 15, 97, 36, 77)]
-goalThresholds = [(33, 53, -22, 0, 30, 60),(21, 28, -24, -15, 1, 9)]
+ballThresholds = [(16, 61, 41, 75, 12, 74)]
+goalThresholds = [(30, 66, -10, 31, 25, 59),(10, 29, -23, 1, -53, -6)]
 #Blue goal (21, 30, -19, -13, -13, 1)
 cropSize = 240
-cropX = 14  #max 80
+cropX = 20  #max 80
 deg = 0
 r = 0
 x = 0
@@ -23,7 +23,7 @@ sensor.set_pixformat(sensor.RGB565)
 sensor.set_framesize(sensor.QVGA)
 sensor.skip_frames(time=2000)
 sensor.set_auto_gain(False,gain_db=14)
-sensor.set_auto_whitebal(False, rgb_gain_db = (-8, -6, -3.4))
+sensor.set_auto_whitebal(False, rgb_gain_db = (-8, -5.8, -1.5))
 sensor.set_auto_exposure(False, 25000)
 sensor.set_windowing((cropX,0,cropSize,cropSize))
 sensor.set_hmirror(True);
@@ -51,13 +51,13 @@ while(True):
     blobs2[0].sort(key=sortStuff, reverse=True)
     blobs2[1].sort(key=sortStuff, reverse=True)
     blobs2[2].sort(key=sortStuff, reverse=True)
-    for x in blobs2:
-        count = 0
-        for y in x:
-            if count < 0:
-                img.draw_rectangle(y.rect())
-                img.draw_cross(y.cx(), y.cy())
-            count += 1
+    #for x in blobs2:
+        #count = 0
+        #for y in x:
+            #if count < 0:
+                #img.draw_rectangle(y.rect())
+                #img.draw_cross(y.cx(), y.cy())
+            #count += 1
     if (len(blobs2[0]) != 0):
         x = blobs2[0][0].cx()
         y = blobs2[0][0].cy()
